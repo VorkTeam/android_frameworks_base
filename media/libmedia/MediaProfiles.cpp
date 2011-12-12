@@ -315,7 +315,7 @@ MediaProfiles::createCamcorderProfile(int cameraId, const char **atts, Vector<in
 
     const size_t nProfileMappings = sizeof(sCamcorderQualityNameMap)/sizeof(sCamcorderQualityNameMap[0]);
     const int quality = findTagForName(sCamcorderQualityNameMap, nProfileMappings, atts[1]);
-    CHECK(quality != -1);
+//    CHECK(quality != -1);
 
     const size_t nFormatMappings = sizeof(sFileFormatMap)/sizeof(sFileFormatMap[0]);
     const int fileFormat = findTagForName(sFileFormatMap, nFormatMappings, atts[3]);
@@ -520,7 +520,7 @@ void MediaProfiles::checkAndAddRequiredProfilesIfNecessary() {
             n = kNumRequiredProfiles;
         } else {
             // Must be camcorder profile.
-            CHECK(isCamcorderProfile(quality));
+//            CHECK(isCamcorderProfile(quality));
         }
         for (; j < n; ++j) {
             info = &(mRequiredProfileRefs[refIndex].mRefs[j]);
